@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useRouter } from "next/router";
+import { db } from "../../database";
 
 const Product = ({ product }) => {
   const { isFallback } = useRouter();
