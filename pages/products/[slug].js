@@ -1,6 +1,5 @@
 import * as React from "react";
 import { useRouter } from "next/router";
-import { db } from "../../database";
 
 const Product = ({ product }) => {
   const { isFallback } = useRouter();
@@ -13,7 +12,7 @@ const Product = ({ product }) => {
 };
 
 export async function getStaticProps({ params }) {
-  const db = await db();
+  const db = await require("../../database").db();
   const product = await db
     .collection("products")
     .findOne({ slug: params.slug });
