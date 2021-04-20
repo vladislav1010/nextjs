@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 import assert from "assert";
 
-const client = new MongoClient(process.env.ATLAS_URL, {
+const client = new MongoClient(process.env.ATLAS_URL as any, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

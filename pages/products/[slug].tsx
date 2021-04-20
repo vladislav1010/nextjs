@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useRouter } from "next/router";
 
-const Product = ({ product }) => {
+const Product = ({ product }: any) => {
   const { isFallback } = useRouter();
 
   if (isFallback) {
@@ -11,7 +11,7 @@ const Product = ({ product }) => {
   return <div>{product.name}</div>;
 };
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: any) {
   const db = await require("../../database").db();
   const product = await db
     .collection("products")

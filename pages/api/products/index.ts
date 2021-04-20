@@ -6,7 +6,7 @@ const handler = nextConnect();
 
 handler.use(database);
 
-handler.post(async (req, res) => {
+handler.post(async (req: any, res: any) => {
   try {
     const input = Object.assign({}, req.body, {
       image:
@@ -17,6 +17,7 @@ handler.post(async (req, res) => {
 
     const insertedProduct = await req.db
       .collection("products")
+      // @ts-ignore
       .findOne({ _id: ObjectId(product.insertedId) });
 
     res.status(201).json({

@@ -1,6 +1,6 @@
-import { mode } from "@chakra-ui/theme-tools";
+import { mode, Styles } from "@chakra-ui/theme-tools";
 
-const styles = {
+const styles: Styles = {
   global: (props) => ({
     body: {
       fontFamily: "body",
@@ -151,6 +151,16 @@ pre`]: {
     "img,video": {
       maxWidth: "100%",
       height: "auto",
+    },
+
+    "svg:not(:root)": {
+      overflow: "hidden",
+    },
+
+    "@media (prefers-reduced-motion: reduce)": {
+      "*, *::before, *::after": {
+        transition: "none",
+      },
     },
   }),
 };
