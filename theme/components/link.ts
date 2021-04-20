@@ -11,6 +11,13 @@ function variantDefault(props: Dict) {
     };
   }
 
+  if (c === "blue") {
+    return {
+      color: mode("blue.600", "blue.400"),
+      _hover: { color: mode("blue.700", "blue.500") },
+    };
+  }
+
   throw new Error("Unsupported color scheme");
 }
 
