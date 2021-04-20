@@ -7,8 +7,6 @@ import {
   Button,
   HTMLChakraProps,
   useColorModeValue,
-  Heading,
-  Text,
 } from "@chakra-ui/react";
 import LogoLink from "./LogoLink";
 import NextLink from "next/link";
@@ -184,20 +182,6 @@ const Header = () => {
                   // @ts-expect-error
                   //suppress RequiredAttributes
                   <Dropdown>
-                    <Box text-align={"left"} color={"gray.500"}>
-                      <Box>
-                        <Heading as={"h3"} fontSize={"inherit"}>
-                          Resources
-                        </Heading>
-                        <Box>
-                          <Heading as={"h4"} fontSize={"sm"} color={"gray.900"}>
-                            Whitepapers
-                          </Heading>
-                          <Text>Lorem ipsum</Text>
-                        </Box>
-                        <Link colorScheme={"blue"}>Read more...</Link>
-                      </Box>
-                    </Box>
                   </Dropdown>
                 }
                 menuItem={x}
