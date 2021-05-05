@@ -181,8 +181,7 @@ const Header = () => {
                 dropdownElement={
                   // @ts-expect-error
                   //suppress RequiredAttributes
-                  <Dropdown>
-                  </Dropdown>
+                  <Dropdown></Dropdown>
                 }
                 menuItem={x}
               />
